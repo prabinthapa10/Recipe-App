@@ -1,4 +1,5 @@
 import React from "react";
+import FooItem from "./Foodtem";
 
 export default function FoodList({ foodData }) {
   return (
@@ -6,7 +7,7 @@ export default function FoodList({ foodData }) {
       {" "}
       <div>
         {foodData.map((food) => (
-          <p>{food.title}</p>
+          <FooItem key={food.id} food={food} />
         ))}
       </div>
     </div>
